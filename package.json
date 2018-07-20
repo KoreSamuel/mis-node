@@ -1,0 +1,53 @@
+{
+    "name": "mis-node",
+    "version": "1.0.0",
+    "description": "a koa2 api service",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app.js --exec babel-node",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "koa",
+        "mongodb"
+    ],
+    "author": "hexy.xiaojie (@gmail.com)",
+    "license": "MIT",
+    "dependencies": {
+        "babel-polyfill": "^6.26.0",
+        "bcrypt": "^3.0.0",
+        "bluebird": "^3.5.1",
+        "config": "^1.30.0",
+        "glob": "^7.1.2",
+        "jsonwebtoken": "^8.3.0",
+        "koa": "^2.5.1",
+        "koa-body": "^4.0.4",
+        "koa-bodyparser": "^4.2.1",
+        "koa-cors": "0.0.16",
+        "koa-helmet": "^4.0.0",
+        "koa-jwt": "^3.3.2",
+        "koa-logger": "^3.2.0",
+        "koa-router": "^7.4.0",
+        "koa-session-minimal": "^3.0.4",
+        "koa2-cors": "^2.0.6",
+        "mongoose": "^5.2.2",
+        "uuid": "^3.3.2",
+        "xss": "^1.0.3"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.5.1",
+        "babel-eslint": "^7.1.1",
+        "babel-plugin-add-module-exports": "^0.2.1",
+        "babel-plugin-syntax-async-functions": "^6.5.0",
+        "babel-plugin-transform-async-to-generator": "^6.5.0",
+        "babel-preset-es2015": "^6.3.13",
+        "babel-register": "^6.3.13",
+        "chai": "^3.5.0",
+        "eslint": "^3.12.2",
+        "eslint-config-airbnb": "^13.0.0",
+        "eslint-plugin-import": "^2.2.0",
+        "nodemon": "^1.8.1",
+        "should": "^11.1.2",
+        "supertest": "^2.0.1"
+    }
+}
