@@ -19,6 +19,25 @@ class SiteController {
     }
   }
 
+  async editSite(ctx) {
+    const { body } = ctx.request;
+    try {
+      // const site = await Site.findById({ _id: body.id });
+      Site.findByIdAndUpdate(body.id, body.values, (err, site) => {
+        if (err) {
+          throw err
+        }
+      });
+      ctx.body = {
+        code: 0,
+        message: '修改成功',
+        info: {}
+      }
+    } catch (err) {
+      throw err
+    }
+  }
+
   async createSite(ctx) {
     const { body } = ctx.request;
     try {
@@ -50,6 +69,22 @@ class SiteController {
       }
     } catch (err) {
       throw (err)
+    }
+  }
+
+  async exportSite(ctx) {
+    const { body } = ctx.request;
+    try {
+      const site = await Site.findById({ _id: body.id });
+      ctx.body = {
+        code: 0,
+        message: '导出成功',
+        info: {
+          site
+        }
+      }
+    } catch (err) {
+      throw err
     }
   }
 }
