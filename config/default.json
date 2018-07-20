@@ -1,6 +1,0 @@
-{
-  "port": 4004,
-  "db_config": {
-    "mongodb": "mongodb://localhost:27017/mis-node"
-  }
-}
