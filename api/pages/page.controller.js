@@ -12,6 +12,7 @@ class PageController {
         return {
           page_id: k._id,
           page_name: k.page_name,
+          page: k.page,
           page_url: k.page_url,
           page_template: k.page_template,
         }
@@ -44,6 +45,7 @@ class PageController {
           page_id: k._id,
           page_name: k.page_name,
           page_url: k.page_url,
+          page: k.page,
           page_template: k.page_template,
         }
       });
@@ -77,6 +79,7 @@ class PageController {
           page_id: k._id,
           page_name: k.page_name,
           page_url: k.page_url,
+          page: k.page,
           page_template: k.page_template,
         }
       });
@@ -110,6 +113,7 @@ class PageController {
           page_id: k._id,
           page_name: k.page_name,
           page_url: k.page_url,
+          page: k.page,
           page_template: k.page_template,
         }
       });
@@ -132,7 +136,6 @@ class PageController {
       const page = pages.site_pages.filter(k => {
         return k._id + '' === query.page_id
       })[0];
-      console.log(page)
       ctx.body = {
         code: 0,
         message: 'success',

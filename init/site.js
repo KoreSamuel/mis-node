@@ -6,15 +6,18 @@ function initSite() {
   return new Promise(resolve => {
     Site.create({
       site_name: '这是个测试网站',
-      site_tempate: '1',
+      site: 'site',
+      site_template: '1',
       site_desc: '测试描述，巴拉巴拉',
       site_menus: [
         {
           menu_name: '菜单一',
+          menu: 'menu1',
           menu_url: '/menu1',
         },
         {
           menu_name: '菜单二',
+          menu: 'menu2',
           menu_url: '/menu2',
         }
       ],
@@ -22,6 +25,7 @@ function initSite() {
         {
           page_name: '测试页面1',
           page_url: 'xxx/yyyy',
+          page: 'page1',
           page_template: '2',
           page_config: {
             url: 'xxx/ssss',
@@ -75,6 +79,7 @@ function initSite() {
         },
         {
           page_name: '测试页面2',
+          page: "page2",
           page_url: 'xxx/yyyy',
           page_template: '2',
           page_config: {
